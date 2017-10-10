@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Poke Page";
+}
+<h1>Pokemon Info Page</h1>
+<img src="@ViewBag.pokeinfo.Sprite" alt="">
+<p>Name</p>
+<p>@ViewBag.pokeinfo.Name</p>
+
+<p>Type</p>
+@foreach (var type in @ViewBag.pokeinfo.Types)
+{
+    <p>@type</p>
+}
+<p>Height</p>
+<p>@ViewBag.pokeinfo.Height</p>
+<p>Weight</p>
+<p>@((float)ViewBag.pokeinfo.Weight/10) kg</p>
